@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Royale Skill - Free 3 Days Online Training</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+        
+        .logo-urdu {
+            font-size: 1.2rem;
+            color: #2a5298;
+            font-family: 'Jameel Noori Nastaleeq', 'Urdu Typesetting', 'Noto Nastaliq Urdu', serif;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #1e3c72;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 3rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button i {
+            margin-left: 10px;
+        }
+        
+        /* Visual Diagrams Section */
+        .diagrams-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+        
+        .diagram-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .diagram-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .diagram-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .diagram-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .laptop-diagram {
+            width: 100%;
+            max-width: 250px;
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 2px solid #ddd;
+        }
+        
+        .laptop-screen {
+            width: 90%;
+            height: 80%;
+            background: #1e3c72;
+            margin: 10px auto;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .screen-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 10px;
+        }
+        
+        .online-class {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+        }
+        
+        .video-call {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+        }
+        
+        .coding-session {
+            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+        }
+        
+        .diagram-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .diagram-desc {
+            color: #666;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .form-title {
+            font-size: 2.2rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #1e3c72;
+            font-size: 1.1rem;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .radio-option input {
+            transform: scale(1.2);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2);
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border: none;
+            padding: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(30, 60, 114, 0.4);
+            margin-top: 2rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(30, 60, 114, 0.5);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-text {
+            color: #1e3c72;
+            font-size: 1rem;
+        }
+        
+        .footer-urdu {
+            font-family: 'Jameel Noori Nastaleeq', 'Urdu Typesetting', 'Noto Nastaliq Urdu', serif;
+            color: #2a5298;
+            font-size: 1rem;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal h2 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .modal p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .modal-btn {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(30, 60, 114, 0.3);
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .diagrams-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-section {
+                padding: 2rem;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <div class="logo-text">Join Royale Skill</div>
+                        <div class="logo-urdu">جوائن رائل سکل</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Free 3 Days Online Training</h1>
+            <p class="hero-subtitle">Learn, Get Interviewed, and Start Earning with Sir Zaib Gondal!</p>
+            <button class="cta-button" id="scrollToForm">
+                Register Now <i class="fas fa-arrow-down"></i>
+            </button>
+            
+            <div class="diagrams-section">
+                <div class="diagram-card">
+                    <div class="diagram-header">
+                        <h3>Live Online Classes</h3>
+                    </div>
+                    <div class="diagram-body">
+                        <div class="laptop-diagram">
+                            <div class="laptop-screen online-class">
+                                <div class="screen-content">
+                                    <i class="fas fa-chalkboard-teacher" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                    <div>Live Class</div>
+                                    <div style="font-size: 0.7rem; margin-top: 5px;">Sir Zaib Gondal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="diagram-title">Interactive Sessions</h4>
+                        <p class="diagram-desc">Real-time learning with expert instructors</p>
+                    </div>
+                </div>
+                
+                <div class="diagram-card">
+                    <div class="diagram-header">
+                        <h3>One-on-One Mentoring</h3>
+                    </div>
+                    <div class="diagram-body">
+                        <div class="laptop-diagram">
+                            <div class="laptop-screen video-call">
+                                <div class="screen-content">
+                                    <i class="fas fa-video" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                    <div>Video Call</div>
+                                    <div style="font-size: 0.7rem; margin-top: 5px;">Personal Guidance</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="diagram-title">Personal Guidance</h4>
+                        <p class="diagram-desc">Get individual attention from mentors</p>
+                    </div>
+                </div>
+                
+                <div class="diagram-card">
+                    <div class="diagram-header">
+                        <h3>Practical Projects</h3>
+                    </div>
+                    <div class="diagram-body">
+                        <div class="laptop-diagram">
+                            <div class="laptop-screen coding-session">
+                                <div class="screen-content">
+                                    <i class="fas fa-code" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                    <div>Coding</div>
+                                    <div style="font-size: 0.7rem; margin-top: 5px;">Hands-on Practice</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="diagram-title">Hands-on Learning</h4>
+                        <p class="diagram-desc">Work on real-world projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="form-section" id="registrationFormSection">
+        <div class="form-header">
+            <h2 class="form-title">Register for Free Training</h2>
+            <p class="form-subtitle">Fill the form below to join our 3-day online course</p>
+        </div>
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="onlineWork">1. Have you ever done online work before?</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="onlineWorkYes" name="onlineWork" value="Yes" required>
+                        <label for="onlineWorkYes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="onlineWorkNo" name="onlineWork" value="No" required>
+                        <label for="onlineWorkNo">No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="skill">2. Do you have any skill?</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="skillYes" name="skill" value="Yes" required>
+                        <label for="skillYes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="skillNo" name="skill" value="No" required>
+                        <label for="skillNo">No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">3. Full Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">4. Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">5. Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">6. Complete Address</label>
+                <input type="text" id="address" class="form-control" placeholder="Enter your complete address" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Submit & Join Now
+            </button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">Powered by Royale Skill – All Rights Reserved © 2025</div>
+                <div class="footer-urdu">رائل سکل کے زیر اہتمام - تمام حقوق محفوظ ہیں © 2025</div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Registration Successful!</h2>
+            <p>Thank you for registering! Our team will contact you soon with further details.</p>
+            <button class="modal-btn" id="closeModal">Close</button>
+        </div>
+    </div>
+    
+    <script>
+        // Scroll to form when CTA button is clicked
+        document.getElementById('scrollToForm').addEventListener('click', function() {
+            document.getElementById('registrationFormSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const onlineWork = document.querySelector('input[name="onlineWork"]:checked').value;
+            const skill = document.querySelector('input[name="skill"]:checked').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            
+            // Validate all fields
+            if (!onlineWork || !skill || !name || !phone || !email || !address) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Show thank you modal
+            document.getElementById('thankYouModal').style.display = 'flex';
+            
+            // Send data to WhatsApp
+            const message = `New Registration Details:%0AName:%20${encodeURIComponent(name)}%0APhone:%20${encodeURIComponent(phone)}%0AEmail:%20${encodeURIComponent(email)}%0AAddress:%20${encodeURIComponent(address)}%0AOnlineWork:%20${encodeURIComponent(onlineWork)}%0ASkill:%20${encodeURIComponent(skill)}`;
+            
+            const whatsappURL = `https://api.whatsapp.com/send?phone=923491851891&text=${message}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+        });
+        
+        // Close modal functionality
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('thankYouModal').style.display = 'none';
+            document.getElementById('registrationForm').reset();
+        });
+        
+        // Close modal if clicked outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('thankYouModal');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.getElementById('registrationForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>
